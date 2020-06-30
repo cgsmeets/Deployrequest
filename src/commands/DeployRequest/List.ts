@@ -16,12 +16,7 @@ export default class List extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-  `$ sfdx hello:org --targetusername myOrg@example.com --targetdevhubusername devhub@org.com
-  Hello world! This is org: MyOrg and I will be around until Tue Mar 20 2018!
-  My hub org id is: 00Dxx000000001234
-  `,
-  `$ sfdx hello:org --name myname --targetusername myOrg@example.com
-  Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
+  `$ sfdx DeployRequest:List -u myorg@example.com
   `
   ];
 

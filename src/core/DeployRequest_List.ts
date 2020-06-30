@@ -99,11 +99,12 @@ async function fnGetDeployRequest(conn: Connection): Promise<DeployRequestRes> {
             throw new Error('All frontdoor login attempts failed');
         }
 
-        await page.waitFor(500);
+        await page.waitFor(100);
 
         console.log('Navigating to: Deploy Status View');
         await page.goto(baseurl + '/lightning/setup/DeployStatus/home');
         await page.waitForNavigation({waitUntil: 'networkidle0'});
+        await page.waitFor(100);
 
         let url: string = null;
         const frm = await page.frames();
