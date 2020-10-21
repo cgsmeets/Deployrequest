@@ -1,27 +1,30 @@
 Puppeteer to grabb DeployRequests
-=======
+=================================
 
+sfdx update
 
-<!-- toc -->
-* [Debugging your plugin](#debugging-your-plugin)
-<!-- tocstop -->
-<!-- install -->
-<!-- usage -->
-```sh-session
-$ npm install -g plugin2
-$ sfdx COMMAND
-running command...
-$ sfdx (-v|--version|version)
-plugin2/0.0.0 darwin-x64 node-v12.13.0
-$ sfdx --help [COMMAND]
-USAGE
-  $ sfdx COMMAND
-...
-```
-<!-- usagestop -->
-<!-- commands -->
-* [`sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-helloorg--n-string--f--v-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+git clone git@github.com:cgsmeets/Deployrequest.git
 
-## `sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+cd Deployrequest
 
-print a greeting and your org IDs
+yarn install
+
+open -a "Visual Studio Code" .
+
+./bin/run DeployRequest:List -u <your org> 
+
+OUTPUT
+======
+----------------- PENDING ------------------------
+
+0Af5I0000000001
+
+----------------- FAILED ------------------------
+
+0Af5I0000012345
+
+0Af5I0000012348
+
+----------------- SUCCESS ------------------------
+
+0Af5I000003IeAI
